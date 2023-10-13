@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 import { ModalService } from './modal.service';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CodeChangeService {
+  openInspectPopUp$ = new BehaviorSubject<boolean>(false);
   constructor(public modalService: ModalService) {}
 
   codeChanged(key: string, newCode: string, oldCode: any) {
@@ -21,6 +23,15 @@ export class CodeChangeService {
     sessionStorage.setItem('codeChanges', JSON.stringify(oldCode));
 
     return true;
+  }
+
+  openInspectPopUp() {
+    let oldCode = JSON.parse(sessionStorage.getItem('codeChanges') ?? '{}');
+    let keys = Object.keys(oldCode);
+
+    if (oldCode['userDetails'] && oldCode['userDetails']?.length == 2) {
+      this.openInspectPopUp$.next(true);
+    }
   }
 
   trackCode(newCode: string, key: string) {

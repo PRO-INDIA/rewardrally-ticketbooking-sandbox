@@ -19,13 +19,14 @@
           <app-trips (closeContainer)="closeContainer($event)"></app-trips>
         </div>
       </div>
-      <div>
+      <div class="pro-gami">
         <pro-gamification
           [userId]="gamificationUserId"
           [applicationId]="gamificationAppId"
           [themeColor]="'secondary'"
           [menuColor]="'white'"
         ></pro-gamification>
+        <inspect-popup></inspect-popup>
       </div>
     </div>
   </div>
