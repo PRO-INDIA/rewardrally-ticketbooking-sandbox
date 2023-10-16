@@ -18,6 +18,7 @@ import { ProGamificationModule } from '@stagetheproindia/pro-gamification';
 import { environment } from '../environments/environment';
 import { ClickOutsideDirective } from './click-outside.directive';
 import { NotifierComponent } from './Components/notifier/notifier.component';
+import { InspectPopupComponent } from './Components/inspect-popup/inspect-popup.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { NotifierComponent } from './Components/notifier/notifier.component';
     ModalComponent,
     ClickOutsideDirective,
     NotifierComponent,
+    InspectPopupComponent,
   ],
   imports: [
     BrowserModule,
