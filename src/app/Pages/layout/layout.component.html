@@ -14,6 +14,7 @@
           (click)="showTrips()"
         >
           My Trips
+          <span class="drop-down-icon"><img  src="../../../assets/images/drop-down.svg" /></span>
         </button>
         <div class="trip-container" *ngIf="showTripContainer">
           <app-trips (closeContainer)="closeContainer($event)"></app-trips>
