@@ -35,11 +35,13 @@
 <body>
   <div class="container">
     <app-book-ticket [tab]="tab"></app-book-ticket>
-    <app-rating
-      [tripId]="tripId"
-      [tab]="tab"
-      (closeContainer)="openHomePage()"
-    ></app-rating>
+    <div *ngIf="tripId">
+      <app-rating
+        [tripId]="tripId"
+        [tab]="tab"
+        (closeContainer)="openHomePage()"
+      ></app-rating>
+    </div>
   </div>
   <footer>
     <div class="empty-container"></div>

@@ -30,14 +30,10 @@ export class RatingComponent implements OnInit {
   rating = 0;
   feedback = '';
   ngOnInit(): void {
-    this.activatedRoute!.params.subscribe((params) => {
-      this.ticketId = params['ticketId'];
-      this.tripDetails = this.ticketService!!.trips.filter((trip) => {
-        return trip.ticketId == this.ticketId;
-      });
-      this.trip = this.tripDetails[0];
+    this.tripDetails = this.ticketService.trips.filter((trip) => {
+      return trip.ticketId == this.tripId;
     });
-    this.codeChangeService.trackCode(this.addReview.toString(), 'rating-code');
+    this.trip = this.tripDetails[0];
   }
 
   addReview() {
