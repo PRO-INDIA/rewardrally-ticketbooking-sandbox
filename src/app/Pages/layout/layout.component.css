@@ -49,6 +49,9 @@ footer {
   width: 70%;
   margin: 3.125em 0 3.125em 0;
 }
+.drop-down-icon{
+  margin-left: 0.3em;
+}
 .brand-container {
   display: flex;
   align-items: center;

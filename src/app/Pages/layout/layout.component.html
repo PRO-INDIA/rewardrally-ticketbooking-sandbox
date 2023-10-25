@@ -14,6 +14,7 @@
           (click)="showTrips()"
         >
           My Trips
+          <span class="drop-down-icon"><img  src="../../../assets/images/drop-down.svg" /></span>
         </button>
         <div class="trip-container" *ngIf="showTripContainer">
           <app-trips (closeContainer)="closeContainer($event)"></app-trips>
@@ -35,11 +36,13 @@
 <body>
   <div class="container">
     <app-book-ticket [tab]="tab"></app-book-ticket>
-    <app-rating
-      [tripId]="tripId"
-      [tab]="tab"
-      (closeContainer)="openHomePage()"
-    ></app-rating>
+    <div *ngIf="tripId">
+      <app-rating
+        [tripId]="tripId"
+        [tab]="tab"
+        (closeContainer)="openHomePage()"
+      ></app-rating>
+    </div>
   </div>
   <footer>
     <div class="empty-container"></div>
