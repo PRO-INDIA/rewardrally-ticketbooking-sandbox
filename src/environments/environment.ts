@@ -1,6 +1,6 @@
 import packageJson from '../../package.json';
 export const environment = {
-  appVersion: packageJson.version,
+  appVersion: '2.1.0',
 
   production: false,
   baseUrl: 'https://stage-gamificationapi.theproindia.com',
