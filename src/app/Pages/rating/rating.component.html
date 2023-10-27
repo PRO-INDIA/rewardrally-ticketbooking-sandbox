@@ -1,63 +1,72 @@
-<div class="rating-page">
-  <div class="header-container">
-    <div class="large-text">Rate and Review Your Trip</div>
-    <div class="medium-text">With {{ trip.travels }}</div>
-  </div>
-  <div class="rating-wrap">
-    <div class="rating-container conainter-decoration">
-      <div class="rating-star">
-        <div class="small-text">Rate your Experience</div>
-        <app-star-rating
-          [maxRating]="5"
-          [currentRating]="0"
-          (ratingUpdated)="onRatingUpdated($event)"
-        ></app-star-rating>
+<ng-container *ngIf="tab == 2">
+  <div class="rating-page">
+    <div class="header-container">
+      <div class="large-text">Rate and Review Your Trip</div>
+      <div class="medium-text">With {{ trip?.travels }}</div>
+    </div>
+    <div class="rating-wrap">
+      <div class="rating-container conainter-decoration">
+        <div class="rating-star">
+          <div class="small-text">Rate your Experience</div>
+          <app-star-rating
+            [maxRating]="5"
+            [currentRating]="rating"
+            (ratingUpdated)="onRatingUpdated($event)"
+          ></app-star-rating>
+        </div>
+        <hr class="separator-feedback" />
+        <div class="rating-textarea">
+          <div class="small-text">Add Detailed Review</div>
+          <textarea
+            [(ngModel)]="feedback"
+            name=""
+            id=""
+            cols="30"
+            rows="5"
+          ></textarea>
+          <small *ngIf="showErrorText"
+            >Please Provide Rating and Feedback</small
+          >
+          <div class="submit-button-container">
+            <div class="submit-button" (click)="addReview(); openHomePage()">
+              Submit
+            </div>
+          </div>
+        </div>
       </div>
-      <hr class="separator-feedback" />
-      <div class="rating-textarea">
-        <div class="small-text">Add Detailed Review</div>
-        <textarea
-          [(ngModel)]="feedback"
-          name=""
-          id=""
-          cols="30"
-          rows="5"
-        ></textarea>
-        <small *ngIf="showErrorText">Please Provide Rating and Feedback</small>
-        <div class="submit-button-container">
-          <div class="submit-button" (click)="addReview()">Submit</div>
+      <div class="trip-container conainter-decoration">
+        <div class="trip-header">
+          <div class="medium-text bold-font">Trip Summary</div>
+          <div>
+            <span class="grey-text">TICKET ID:</span> {{ trip?.ticketId }}
+          </div>
+        </div>
+        <div class="trip-details">
+          <div class="travel-location-details">
+            <div>
+              <div class="medium-text bold-font">{{ trip?.from }}</div>
+              <div class="grey-text">{{ trip?.boarding }}</div>
+            </div>
+            <div>
+              <div class="medium-text bold-font">{{ trip?.to }}</div>
+              <div class="grey-text">{{ trip?.drop }}</div>
+            </div>
+          </div>
+          <hr />
+          <div class="travel-location-details">
+            <div class="grey-text">
+              {{ trip?.day }},
+              {{ trip?.date + "-" + trip?.month + "-" + trip?.year }}
+            </div>
+            <div class="grey-text">{{ trip?.time }}</div>
+          </div>
+          <hr />
+          <div>
+            <div class="medium-text bold-font">{{ trip?.travels }}</div>
+            <div class="grey-text">Seat 2D</div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="trip-container conainter-decoration">
-      <div class="trip-header">
-        <div class="medium-text bold-font">Trip Summary</div>
-        <div><span class="grey-text">TICKET ID:</span> {{ trip.ticketId }}</div>
-      </div>
-      <div class="trip-details">
-        <div class="travel-location-details">
-          <div>
-            <div class="medium-text bold-font">{{ trip.from }}</div>
-            <div class="grey-text">{{ trip.boarding }}</div>
-          </div>
-          <div>
-            <div class="medium-text bold-font">{{ trip.to }}</div>
-            <div class="grey-text">{{ trip.drop }}</div>
-          </div>
-        </div>
-        <hr />
-        <div class="travel-location-details">
-          <div class="grey-text">
-            {{ trip.day }}, {{ trip.date + "-" + trip.month + "-" + trip.year }}
-          </div>
-          <div class="grey-text">{{ trip.time }}</div>
-        </div>
-        <hr />
-        <div>
-          <div class="medium-text bold-font">{{ trip.travels }}</div>
-          <div class="grey-text">Seat 2D</div>
-        </div>
-      </div>
-    </div>
   </div>
-</div>
+</ng-container>

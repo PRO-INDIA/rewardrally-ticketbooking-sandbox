@@ -1,5 +1,5 @@
-<div class="container">
-  <div class="close-button-container" (click)="closeModal()">
+<div class="container" id="popUp">
+  <div class="close-button-container" clickOutside (clickOutside)="closeModal()" (click)="closeModal()">
     <svg
       id="Group_2200"
       data-name="Group 2200"

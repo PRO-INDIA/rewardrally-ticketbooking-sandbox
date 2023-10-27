@@ -8,15 +8,14 @@ import { TicketService } from '../../Services/ticket.service';
   styleUrls: ['./trips.component.css'],
 })
 export class TripsComponent implements OnInit {
-  trips: any = [];
-  @Output() closeContainer = new EventEmitter<boolean>();
+  trips: any = this.ticketService.trips;
+  @Output() closeContainer = new EventEmitter<string>();
   constructor(public ticketService: TicketService, public route: Router) {}
 
   ngOnInit(): void {
     this.trips = this.ticketService.trips;
   }
   openRatingPage(trip: any) {
-    this.closeContainer.emit(false);
-    this.route.navigateByUrl('/rating/' + trip.ticketId);
+    this.closeContainer.emit(trip.ticketId);
   }
 }

@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { LayoutComponent } from './Pages/layout/layout.component';
 import { ConfirmDialogComponent } from './Components/confirm-dialog/confirm-dialog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ProGamificationModule } from '@theproindia/pro-gamification';
 import { BookTicketComponent } from './Components/book-ticket/book-ticket.component';
 import { OfferComponent } from './Components/offer/offer.component';
 import { BusDetailComponent } from './Components/bus-detail/bus-detail.component';
@@ -15,7 +14,11 @@ import { RatingComponent } from './Pages/rating/rating.component';
 import { StarRatingModule } from 'angular-star-rating';
 import { StarRatingComponent } from './Components/star-rating/star-rating.component';
 import { ModalComponent } from './Components/modal/modal.component';
+import { ProGamificationModule } from '@stagetheproindia/pro-gamification';
 import { environment } from '../environments/environment';
+import { ClickOutsideDirective } from './click-outside.directive';
+import { NotifierComponent } from './Components/notifier/notifier.component';
+import { InspectPopupComponent } from './Components/inspect-popup/inspect-popup.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +33,9 @@ import { environment } from '../environments/environment';
     RatingComponent,
     StarRatingComponent,
     ModalComponent,
+    ClickOutsideDirective,
+    NotifierComponent,
+    InspectPopupComponent,
   ],
   imports: [
     BrowserModule,

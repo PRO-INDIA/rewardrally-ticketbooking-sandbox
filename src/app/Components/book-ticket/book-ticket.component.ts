@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { environment } from '../../../environments/environment';
 @Component({
   selector: 'app-book-ticket',
   templateUrl: './book-ticket.component.html',
   styleUrls: ['./book-ticket.component.css'],
 })
-export class BookTicketComponent implements OnInit {
-  constructor() {}
+export class BookTicketComponent {
+  @Input() tab = 0;
   containerName = environment.containerName;
   blobEndPoint = environment.blobEndpoint;
   offers: any = [
@@ -114,6 +114,4 @@ export class BookTicketComponent implements OnInit {
       droppinglandMark: 'Near MG Road',
     },
   ];
-
-  ngOnInit(): void {}
 }
