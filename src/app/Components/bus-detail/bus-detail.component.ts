@@ -17,6 +17,7 @@ export class BusDetailComponent implements OnInit {
   containerName = environment.containerName;
   blobEndPoint = environment.blobEndpoint;
   togglePaymet: boolean = false;
+  rewardPoints: any;
 
   sasToken: string =
     '?sv=2022-11-02&ss=b&srt=sco&sp=rl&se=2023-09-29T20:31:56Z&st=2023-06-26T12:31:56Z&spr=https&sig=YCdfDxg%2FahnmjRUqgBGCGPNGw7yFQFaUGtY%2FMUYgvRM%3D';
@@ -27,17 +28,18 @@ export class BusDetailComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  bookTicket() {
-    this.gamification.updateGameAction(
+  async bookTicket() {
+    this.rewardPoints = await this.gamification.updateGameAction(
       environment.gamification.userId,
       environment.gamification.gameId,
       '',
       ''
     );
+
     this.modalService.modalStateData.next({
       headerText: 'Booked Successfully',
       pointsText: 'Points',
-      points: '20',
+      points: this.rewardPoints.points,
     });
     this.modalService.openModal();
   }

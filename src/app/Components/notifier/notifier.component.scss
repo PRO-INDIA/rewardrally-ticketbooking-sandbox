@@ -1,0 +1,33 @@
+.modal-wrap {
+  width: fit-content;
+  height: fit-content;
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgb(80, 167, 178);
+  background: linear-gradient(to bottom right, #50a7b2, #4d19c3);
+  font-weight: 500;
+  margin: auto;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3em;
+  padding: 0.5em;
+  color: white;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+
+  a {
+    align-self: flex-end;
+    cursor: pointer;
+    font-size: 3em;
+  }
+  .modal-content {
+    padding: 0em 1em 2em;
+    h2 {
+      width: 80%;
+      line-height: 1.5em;
+    }
+  }
+}

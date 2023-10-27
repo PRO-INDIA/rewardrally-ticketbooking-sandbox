@@ -1,114 +1,116 @@
-<section>
-  <div class="title-section">
-    <div class="title">Bus Booking</div>
-    <div class="sub-title">
-      Bus Ticket Booking.Travelling with a group? Hire a bus.
-    </div>
-  </div>
-</section>
-<section>
-  <div class="search-section container-decoration">
-    <div class="input-1">
-      <div class="input-title">From</div>
-      <div class="input-place">Chennai</div>
-      <div class="input-state">Tamilnadu</div>
-    </div>
-    <div class="input-2">
-      <div class="input-title">To</div>
-      <div class="input-place">Kochi</div>
-      <div class="input-state">Kerala</div>
-    </div>
-    <div class="input-3">
-      <div class="input-title">Date</div>
-      <div class="input-place">23 Feb</div>
-      <div class="input-state">Tuesday</div>
-    </div>
-    <div class="search-button-container">
-      <div class="search-button">Search</div>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="offers-section container-decoration">
-    <div class="offers-title">Offers</div>
-    <div class="offers-wrap">
-      <div class="offer-1-section">
-        <app-offer
-          *ngFor="let offer of offers | slice : 0"
-          [offer]="offer"
-        ></app-offer>
-      </div>
-      <div class="offer-2-section">
-        <app-offer
-          *ngFor="let offer of offers | slice : 3"
-          [offer]="offer"
-        ></app-offer>
+<ng-container *ngIf="tab == 1">
+  <section>
+    <div class="title-section">
+      <div class="title">Bus Booking</div>
+      <div class="sub-title">
+        Bus Ticket Booking.Travelling with a group? Hire a bus.
       </div>
     </div>
-  </div>
-</section>
-<section>
-  <div class="bus-detail-section container-decoration">
-    <div class="offers-title">Available Bus (5)</div>
-    <div class="bus-list">
-      <app-bus-detail
-        *ngFor="let bus of buses"
-        [busDetails]="bus"
-      ></app-bus-detail>
+  </section>
+  <section>
+    <div class="search-section container-decoration">
+      <div class="input-1">
+        <div class="input-title">From</div>
+        <div class="input-place">Chennai</div>
+        <div class="input-state">Tamilnadu</div>
+      </div>
+      <div class="input-2">
+        <div class="input-title">To</div>
+        <div class="input-place">Kochi</div>
+        <div class="input-state">Kerala</div>
+      </div>
+      <div class="input-3">
+        <div class="input-title">Date</div>
+        <div class="input-place">23 Feb</div>
+        <div class="input-state">Tuesday</div>
+      </div>
+      <div class="search-button-container">
+        <div class="search-button">Search</div>
+      </div>
     </div>
-  </div>
-</section>
-<section>
-  <div class="about-product">
-    <div class="product-container">
-      <div>
-        <div class="product-title">PRODUCT OFFERING</div>
-        <div class="product-desc">
-          Flights, International Flights, Charter Flights, Hotels, International
-          Hotels, Homestays and Villas, Activities, Holidays In India,
-          International Holidays, Book Hotels From UAE, myBiz for Corporate
-          Travel, Book Online Cabs, Book Bus Tickets, Book Train Tickets, Cheap
-          Tickets to India, Book Flights From US, Book Flights From UAE, Trip
-          Planner, Gift Cards, Trip Money, Trip Ideas, Travel Blog, PNR Status,
-          One Way Cab
+  </section>
+  <section>
+    <div class="offers-section container-decoration">
+      <div class="offers-title">Offers</div>
+      <div class="offers-wrap">
+        <div class="offer-1-section">
+          <app-offer
+            *ngFor="let offer of offers | slice : 0"
+            [offer]="offer"
+          ></app-offer>
         </div>
-      </div>
-      <div>
-        <div class="product-title">MAKEMYTRIP</div>
-        <div class="product-desc">
-          About Us, Investor Relations, Careers, MMT Foundation, CSR Policy,
-          myPartner - Travel Agent Portal, Foreign Exchange, List your hotel,
-          Partners- Redbus, Partners- Goibibo
-        </div>
-      </div>
-      <div>
-        <div class="product-title">ABOUT THE SITE</div>
-        <div class="product-desc">
-          Customer Support, Payment Security, Privacy Policy, User Agreement,
-          Terms of Service, More Offices, Make A Payment, Work From Home
-        </div>
-      </div>
-      <div>
-        <div class="product-title">IMPORTANT LINKS</div>
-        <div class="product-desc">
-          Bangalore to Chennai Bus, Chennai to Bangalore Bus, Kolkata to
-          Siliguri Bus, Chandigarh to Manali Bus, Delhi to Jaipur Bus, Delhi to
-          Chandigarh Bus, Mumbai to Goa Bus, Delhi to Shimla Bus, Mumbai to Pune
-          Bus, Delhi to Haridwar Bus, Mumbai to Bangalore Bus, Bangalore to Goa
-          Bus, Hyderabad to Bangalore Bus, Bangalore to Hyderabad Bus, Delhi to
-          Dehradun Bus, Lucknow to Delhi Bus, Jaipur to Delhi Bus, Bhopal to
-          Indore Bus, Delhi to Manali Bus, Indore to Bhopal Bus
-        </div>
-      </div>
-      <div>
-        <div class="product-title">QUICK LINKS</div>
-        <div class="product-desc">
-          SBSTC, TSRTC, ASTC, Hans Travels, UPSRTC, SRM Travels, M J T Travels,
-          MSRTC, Parveen Travels, Kaveri Travels, OSRTC, GSRTC, Neeta Travels,
-          KPN Travels, VRL Travels, Green line Travels, TNSTC, HRTC, APSRTC,
-          TSRTC
+        <div class="offer-2-section">
+          <app-offer
+            *ngFor="let offer of offers | slice : 3"
+            [offer]="offer"
+          ></app-offer>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+  <section>
+    <div class="bus-detail-section container-decoration">
+      <div class="offers-title">Available Bus (5)</div>
+      <div class="bus-list">
+        <app-bus-detail
+          *ngFor="let bus of buses"
+          [busDetails]="bus"
+        ></app-bus-detail>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="about-product">
+      <div class="product-container">
+        <div>
+          <div class="product-title">PRODUCT OFFERING</div>
+          <div class="product-desc">
+            Flights, International Flights, Charter Flights, Hotels,
+            International Hotels, Homestays and Villas, Activities, Holidays In
+            India, International Holidays, Book Hotels From UAE, myBiz for
+            Corporate Travel, Book Online Cabs, Book Bus Tickets, Book Train
+            Tickets, Cheap Tickets to India, Book Flights From US, Book Flights
+            From UAE, Trip Planner, Gift Cards, Trip Money, Trip Ideas, Travel
+            Blog, PNR Status, One Way Cab
+          </div>
+        </div>
+        <div>
+          <div class="product-title">MAKEMYTRIP</div>
+          <div class="product-desc">
+            About Us, Investor Relations, Careers, MMT Foundation, CSR Policy,
+            myPartner - Travel Agent Portal, Foreign Exchange, List your hotel,
+            Partners- Redbus, Partners- Goibibo
+          </div>
+        </div>
+        <div>
+          <div class="product-title">ABOUT THE SITE</div>
+          <div class="product-desc">
+            Customer Support, Payment Security, Privacy Policy, User Agreement,
+            Terms of Service, More Offices, Make A Payment, Work From Home
+          </div>
+        </div>
+        <div>
+          <div class="product-title">IMPORTANT LINKS</div>
+          <div class="product-desc">
+            Bangalore to Chennai Bus, Chennai to Bangalore Bus, Kolkata to
+            Siliguri Bus, Chandigarh to Manali Bus, Delhi to Jaipur Bus, Delhi
+            to Chandigarh Bus, Mumbai to Goa Bus, Delhi to Shimla Bus, Mumbai to
+            Pune Bus, Delhi to Haridwar Bus, Mumbai to Bangalore Bus, Bangalore
+            to Goa Bus, Hyderabad to Bangalore Bus, Bangalore to Hyderabad Bus,
+            Delhi to Dehradun Bus, Lucknow to Delhi Bus, Jaipur to Delhi Bus,
+            Bhopal to Indore Bus, Delhi to Manali Bus, Indore to Bhopal Bus
+          </div>
+        </div>
+        <div>
+          <div class="product-title">QUICK LINKS</div>
+          <div class="product-desc">
+            SBSTC, TSRTC, ASTC, Hans Travels, UPSRTC, SRM Travels, M J T
+            Travels, MSRTC, Parveen Travels, Kaveri Travels, OSRTC, GSRTC, Neeta
+            Travels, KPN Travels, VRL Travels, Green line Travels, TNSTC, HRTC,
+            APSRTC, TSRTC
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</ng-container>

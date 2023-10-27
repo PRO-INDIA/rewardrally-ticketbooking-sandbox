@@ -1,47 +1,45 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Gamification } from '@theproindia/pro-gamification';
+import { CodeChangeService } from '../../Services/code-change.service';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ModalService } from '../../Services/modal.service';
 import { TicketService } from '../../Services/ticket.service';
-
+import { Gamification } from '@theproindia/pro-gamification';
 @Component({
   selector: 'app-rating',
   templateUrl: './rating.component.html',
   styleUrls: ['./rating.component.css'],
 })
 export class RatingComponent implements OnInit {
+  @Output() closeContainer = new EventEmitter<number>();
   constructor(
     public activatedRoute: ActivatedRoute,
     public ticketService: TicketService,
     public modalService: ModalService,
-    public gamification: Gamification
+    public gamification: Gamification,
+    public route: Router,
+    private codeChangeService: CodeChangeService
   ) {}
   showErrorText: boolean = false;
   ticketId: string = '';
   tripDetails: any;
   trip: any;
-  ngOnInit(): void {
-    this.activatedRoute.params.subscribe((params) => {
-      this.ticketId = params['ticketId'];
-      this.tripDetails = this.ticketService.trips.filter((trip) => {
-        return trip.ticketId == this.ticketId;
-      });
-      this.trip = this.tripDetails[0];
-    });
-  }
+  rewardPoints: any;
+  @Input() tripId = '';
+  @Input() tab = 0;
   @Input() busDeatails: any = {};
   rating = 0;
   feedback = '';
+  ngOnInit(): void {
+    this.tripDetails = this.ticketService.trips.filter((trip) => {
+      return trip.ticketId == this.tripId;
+    });
+    this.trip = this.tripDetails[0];
+  }
 
   addReview() {
     if (this.rating && this.feedback) {
       this.resetForm();
-      this.modalService.modalStateData.next({
-        headerText: 'Glad you Like it',
-        pointsText: 'Points',
-        points: '25',
-      });
-      this.modalService.openModal();
+      //Paste the copied code here
     } else {
       this.showErrorText = true;
     }
@@ -52,5 +50,9 @@ export class RatingComponent implements OnInit {
   resetForm() {
     this.showErrorText = false;
     this.feedback = '';
+    this.rating = 0;
+  }
+  openHomePage() {
+    this.closeContainer.emit(1);
   }
 }

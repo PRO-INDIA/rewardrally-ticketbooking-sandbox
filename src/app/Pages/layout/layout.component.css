@@ -4,7 +4,9 @@ body {
   margin: 0;
   font-family: sans-serif;
 }
-
+.pro-gami{
+  position: relative;
+}
 header {
   height: 3.75em;
   background-color: #235449;
@@ -47,6 +49,9 @@ footer {
   width: 70%;
   margin: 3.125em 0 3.125em 0;
 }
+.drop-down-icon{
+  margin-left: 0.3em;
+}
 .brand-container {
   display: flex;
   align-items: center;
@@ -62,6 +67,8 @@ footer {
   font-size: 1em;
   color: white;
   cursor: pointer;
+  background: transparent;
+  border: none;
 }
 
 .trip-container {
