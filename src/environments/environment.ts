@@ -10,8 +10,8 @@ export const environment = {
   clientSecret: '2BG8Q~Vsd33.QQ93jcejZkrr5aVyXvxbl_FrubYg',
   //Paste your code in gamification object
   gamification: {
-    userId: 'RedeemPlayer-2',
-    gameId: '6527d7ec644011d69b2f7e18',
-    applicationId: '6527d7c664401183eb2f7df7',
+    userId: 'ba110b38-a247-4b95-af62-c1aa676ad8c1',
+    gameId: '64e72ea3a782523d5452dbae',
+    applicationId: '64e72ea2a782523d5452db8f',
   },
 };
