@@ -1,7 +1,7 @@
 import packageJson from '../../package.json';
  
 export const environment = {
-  appVersion: packageJson.version,
+  appVersion: "2.1.0",
   production: false,
   baseUrl: 'https://gamifyapi.theproindia.com',
   blobEndpoint: 'https://prodgamificationui.blob.core.windows.net',
