@@ -11,7 +11,7 @@ import { Tab } from '../../enum/tab.enum';
 export class LayoutComponent {
   gamificationUserId = environment.gamification.userId;
   gamificationAppId = environment.gamification.applicationId;
-  logoUrl = `${environment.blobEndpoint}/${environment.containerName}/flag.svg?sv=2021-10-04&si=sandbox-assets-18674F72D96&sr=c&sig=rKjuSXkKkvZGBsbvSQEBAPdiHxKqfQ7U2s1I8Na%2FaE8%3D`;
+  logoUrl = `${environment.blobEndpoint}/${environment.containerName}/flag.svg?sv=2020-10-02&si=sandbox-assets-188BDA9327F&sr=c&sig=kHlt0prnMYgLIWMPASPmU2VN%2BlxXICXJMkEkV863RoE%3D`;
   showTripContainer = false;
   tripId = '';
   tab = 1;
