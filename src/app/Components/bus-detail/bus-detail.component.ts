@@ -20,7 +20,7 @@ export class BusDetailComponent implements OnInit {
   rewardPoints: any;
 
   sasToken: string =
-    '?sv=2022-11-02&ss=b&srt=sco&sp=rl&se=2023-09-29T20:31:56Z&st=2023-06-26T12:31:56Z&spr=https&sig=YCdfDxg%2FahnmjRUqgBGCGPNGw7yFQFaUGtY%2FMUYgvRM%3D';
+    '?sv=2020-10-02&si=sandbox-assets-188BDA9327F&sr=c&sig=kHlt0prnMYgLIWMPASPmU2VN%2BlxXICXJMkEkV863RoE%3D';
 
   busFacility: string = `${this.blobEndPoint}/${this.containerName}/bus-facility.png`;
 
