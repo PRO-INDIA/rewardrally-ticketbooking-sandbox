@@ -40,6 +40,12 @@ export class RatingComponent implements OnInit {
     if (this.rating && this.feedback) {
       this.resetForm();
       //Paste the copied code here
+      this.gamification.updateGameAction(
+        '3897fa0d-ac99-4b59-a886-35566abf1301',
+        '654098dc3b35500e3f4789b9',
+        '',
+        ''
+      );
     } else {
       this.showErrorText = true;
     }
