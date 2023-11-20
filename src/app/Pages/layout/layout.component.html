@@ -14,7 +14,26 @@
           (click)="showTrips()"
         >
           My Trips
-          <span class="drop-down-icon"><img  src="../../../assets/images/drop-down.svg" /></span>
+          <span class="drop-down-icon"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="12.458"
+              height="6.914"
+              viewBox="0 0 12.458 6.914"
+            >
+              <path
+                id="Path_6234"
+                data-name="Path 6234"
+                d="M0,0,4.7,4.5,9.632,0"
+                transform="translate(1.414 1.414)"
+                fill="none"
+                stroke="#f5da48"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </span>
         </button>
         <div class="trip-container" *ngIf="showTripContainer">
           <app-trips (closeContainer)="closeContainer($event)"></app-trips>

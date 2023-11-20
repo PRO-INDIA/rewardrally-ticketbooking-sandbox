@@ -94,7 +94,7 @@ export class TicketService {
       year: this.date.getFullYear(),
       from: 'Chennai',
       to: 'Madurai',
-      boarding: 'kolathur',
+      boarding: 'Guindy',
       drop: 'Mattuthavani',
       rating: 0,
       travels: 'YBM Travels',
