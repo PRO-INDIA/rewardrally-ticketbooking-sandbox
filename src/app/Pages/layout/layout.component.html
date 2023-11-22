@@ -14,7 +14,9 @@
           (click)="showTrips()"
         >
           My Trips
-          <span class="drop-down-icon"><img  src="../../../assets/images/drop-down.svg" /></span>
+          <span class="drop-down-icon"
+            ><img src="../../../assets/images/drop-down.svg"
+          /></span>
         </button>
         <div class="trip-container" *ngIf="showTripContainer">
           <app-trips (closeContainer)="closeContainer($event)"></app-trips>
@@ -27,7 +29,6 @@
           [themeColor]="'secondary'"
           [menuColor]="'white'"
         ></pro-gamification>
-        <inspect-popup></inspect-popup>
       </div>
     </div>
   </div>
@@ -52,4 +53,3 @@
     <div class="empty-container"></div>
   </footer>
 </body>
-<app-notifier></app-notifier>
