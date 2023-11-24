@@ -66,6 +66,11 @@ textarea {
   display: flex;
   align-items: center;
 }
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 .submit-button {
   background: #ffa600 0% 0% no-repeat padding-box;
   border-radius: 3.125em;
