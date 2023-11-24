@@ -1,4 +1,3 @@
-import { CodeChangeService } from '../../Services/code-change.service';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ModalService } from '../../Services/modal.service';
@@ -16,8 +15,7 @@ export class RatingComponent implements OnInit {
     public ticketService: TicketService,
     public modalService: ModalService,
     public gamification: Gamification,
-    public route: Router,
-    private codeChangeService: CodeChangeService
+    public route: Router
   ) {}
   showErrorText: boolean = false;
   ticketId: string = '';
@@ -29,6 +27,7 @@ export class RatingComponent implements OnInit {
   @Input() busDeatails: any = {};
   rating = 0;
   feedback = '';
+
   ngOnInit(): void {
     this.tripDetails = this.ticketService.trips.filter((trip) => {
       return trip.ticketId == this.tripId;
@@ -54,5 +53,10 @@ export class RatingComponent implements OnInit {
   }
   openHomePage() {
     this.closeContainer.emit(1);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
   }
 }

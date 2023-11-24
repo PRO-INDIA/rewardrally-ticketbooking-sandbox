@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { environment } from '../../../environments/environment';
-import { CodeChangeService } from '../../Services/code-change.service';
 import { Tab } from '../../enum/tab.enum';
 
 @Component({
@@ -15,12 +14,7 @@ export class LayoutComponent {
   showTripContainer = false;
   tripId = '';
   tab = 1;
-  constructor(private codeChangeService: CodeChangeService) {
-    this.codeChangeService.trackCode(
-      JSON.stringify(environment.gamification),
-      'userDetails'
-    );
-  }
+  constructor() {}
 
   showTrips() {
     this.showTripContainer = !this.showTripContainer;
