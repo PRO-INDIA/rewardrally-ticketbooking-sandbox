@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Gamification } from '@stagetheproindia/pro-gamification';
+import { Gamification } from '@theproindia/pro-gamification';
 import { environment } from '../../../environments/environment';
 import { ModalService } from '../../Services/modal.service';
 
