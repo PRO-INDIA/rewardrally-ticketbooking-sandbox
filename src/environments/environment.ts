@@ -6,8 +6,8 @@ export const environment = {
   baseUrl: 'https://gamifyapi.theproindia.com',
   blobEndpoint: 'https://prodgamificationui.blob.core.windows.net',
   containerName: 'sandbox-assets',
-  clientId: '65e98e3c-cf5f-49c7-8cb6-a7a0c8a75e1e',
-  clientSecret: 'ofi8Q~gtJKac_.jTaGWFzcFjQHM6cRQzKDkpWduI',
+  clientId: 'd3074866-20d9-450e-84d9-7e3b7e7c6416',
+  clientSecret: 'eIF8Q~KzFTkMRI6qCxGNqUZI5.UOO.KBlSpdxbSX',
   //Paste Your Application Code
   gamification: {
     userId: 'kalai@123',
