@@ -1,5 +1,5 @@
 <div class="container-decoration">
-  <div class="bus-detail-container" (click)="togglePayment()">
+  <div class="bus-detail-container" (click)="togglePayment(index)">
     <div class="bus-name-container">
       <div class="bus-name-detail">
         <div class="bus-name">{{ busDetails.name }}</div>
@@ -34,7 +34,9 @@
       </div>
     </div>
   </div>
-  <div class="confirm-section" *ngIf="togglePaymet">
+  <div class="confirm-section"    id="{{
+     'bus-' +index
+  }}"  *ngIf="togglePaymet">
     <div class="payment-container">
       <div
         class="seat-selection"
