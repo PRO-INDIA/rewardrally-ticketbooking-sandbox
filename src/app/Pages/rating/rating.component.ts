@@ -27,11 +27,16 @@ export class RatingComponent implements OnInit {
   @Input() busDeatails: any = {};
   rating = 0;
   feedback = '';
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   ngOnInit(): void {
     this.tripDetails = this.ticketService.trips.filter((trip) => {
       return trip.ticketId == this.tripId;
     });
     this.trip = this.tripDetails[0];
+    this.scrollToTop();
   }
 
   addReview() {

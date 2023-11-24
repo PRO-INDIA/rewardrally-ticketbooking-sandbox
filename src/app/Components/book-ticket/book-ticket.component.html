@@ -53,8 +53,9 @@
       <div class="offers-title">Available Bus (5)</div>
       <div class="bus-list">
         <app-bus-detail
-          *ngFor="let bus of buses"
+          *ngFor="let bus of buses;let i =index"
           [busDetails]="bus"
+          [index]="i"
         ></app-bus-detail>
       </div>
     </div>

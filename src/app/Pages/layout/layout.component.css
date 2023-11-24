@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: sans-serif;
 }
+
 .pro-gami{
   position: relative;
 }
@@ -57,6 +58,8 @@ footer {
   align-items: center;
   justify-content: space-between;
   gap: 1em;
+  border: none;
+  text-decoration: none;
 }
 .profile-container {
   display: flex;
