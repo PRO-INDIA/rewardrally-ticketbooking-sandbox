@@ -35,16 +35,22 @@ export class RatingComponent implements OnInit {
     this.trip = this.tripDetails[0];
   }
 
-  addReview() {
+  async addReview() {
     if (this.rating && this.feedback) {
       this.resetForm();
       //Paste the copied code here
-      this.gamification.updateGameAction(
+      this.rewardPoints = await this.gamification.updateGameAction(
         '4f4362b0-7647-4e57-a7aa-bfa0e1edd326',
         '653e0370f23798ae11bbc011',
         '',
         ''
       );
+      this.modalService.modalStateData.next({
+        headerText: 'Booked Successfully',
+        pointsText: 'Points',
+        points: this.rewardPoints.points,
+      });
+      this.modalService.openModal();
     } else {
       this.showErrorText = true;
     }
