@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ModalService } from '../../Services/modal.service';
 import { TicketService } from '../../Services/ticket.service';
 import { Gamification } from '@theproindia/pro-gamification';
+import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-rating',
   templateUrl: './rating.component.html',
@@ -39,6 +40,12 @@ export class RatingComponent implements OnInit {
     if (this.rating && this.feedback) {
       this.resetForm();
       //Paste the copied code here
+      this.gamification.updateGameAction(
+        '4f4362b0-7647-4e57-a7aa-bfa0e1edd326',
+        '653e0370f23798ae11bbc011',
+        '',
+        ''
+      );
     } else {
       this.showErrorText = true;
     }
