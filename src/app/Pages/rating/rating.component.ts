@@ -3,7 +3,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ModalService } from '../../Services/modal.service';
 import { TicketService } from '../../Services/ticket.service';
 import { Gamification } from '@theproindia/pro-gamification';
-import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-rating',
   templateUrl: './rating.component.html',
