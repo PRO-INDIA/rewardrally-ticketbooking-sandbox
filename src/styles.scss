@@ -5,3 +5,9 @@
 ::-webkit-scrollbar-thumb {
   background-color: #fff;
 }
+:root {
+  --font-size-base: clamp(0.7rem, 1.5vw, 1rem);
+}
+body {
+  font-size: var(--font-size-base);
+}
