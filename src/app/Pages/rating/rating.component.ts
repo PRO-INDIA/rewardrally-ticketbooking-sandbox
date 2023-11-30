@@ -41,7 +41,7 @@ export class RatingComponent implements OnInit {
       //Paste the copied code here
       this.rewardPoints = await this.gamification.updateGameAction(
         '4f4362b0-7647-4e57-a7aa-bfa0e1edd326',
-        '653e0370f23798ae11bbc011',
+        '65657ea5f7eec0fe6305eaba',
         '',
         ''
       );
