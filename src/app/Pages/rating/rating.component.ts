@@ -40,7 +40,7 @@ export class RatingComponent implements OnInit {
       this.resetForm();
       //Paste the copied code here
       this.rewardPoints = await this.gamification.updateGameAction(
-        '3897fa0d-ac99-4b59-a886-35566abf1301',
+        '20cf82e7-5cd4-479e-8fef-2ca0ce6f78fe',
         '654098dc3b35500e3f4789b9',
         '',
         ''
