@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Gamification } from '@stagetheproindia/pro-gamification';
+import { Gamification } from '@theproindia/pro-gamification';
 import { environment } from '../../../environments/environment';
 import { ModalService } from '../../Services/modal.service';
 
@@ -19,9 +19,6 @@ export class BusDetailComponent implements OnInit {
   blobEndPoint = environment.blobEndpoint;
   togglePaymet: boolean = false;
   rewardPoints: any;
-
-  sasToken: string =
-    '?sv=2021-10-04&si=sandbox-assets-18674F72D96&sr=c&sig=rKjuSXkKkvZGBsbvSQEBAPdiHxKqfQ7U2s1I8Na%2FaE8%3D';
 
   busFacility: string = `${this.blobEndPoint}/${this.containerName}/bus-facility.png`;
 
