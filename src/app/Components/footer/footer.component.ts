@@ -7,7 +7,6 @@ import { environment } from '../../../environments/environment';
   styleUrls: ['./footer.component.css'],
 })
 export class FooterComponent implements OnInit {
-  constructor() {}
   appVersion = '';
   ngOnInit(): void {
     this.appVersion = 'v' + environment.appVersion;
