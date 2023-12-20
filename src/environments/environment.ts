@@ -1,4 +1,5 @@
 import packageJson from '../../package.json';
+
 export const environment = {
   appVersion: '2.1.0',
   production: false,
