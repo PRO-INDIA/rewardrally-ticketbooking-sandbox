@@ -72,6 +72,9 @@
   padding: 0.8em 1.5em;
   font-weight: bold;
   font-size: 1.5em;
+  border: none;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .input-1,
@@ -186,7 +189,7 @@
   .input-3 {
     width: 98%;
     border-bottom: 1px solid #dedede;
-    padding-left: 0.6em;
+    padding-left: 1.5em;
     border-right: none;
   }
   .input-state {
@@ -242,7 +245,7 @@
   .input-3 {
     width: 98%;
     border-bottom: 1px solid #dedede;
-    padding: 0.5em;
+    padding: 1.5em;
     border-right: none;
   }
   .input-state {

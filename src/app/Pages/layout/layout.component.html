@@ -1,9 +1,11 @@
 <header style="font-family: sans-serif">
   <div class="empty-container"></div>
   <div class="header-content">
-    <div class="brand-container">
-      <img [src]="logoUrl" alt="" />
-      <div class="title">PRO Gamify</div>
+    <div class="">
+      <a class="brand-container" href="/">
+        <img [src]="logoUrl" alt="" />
+        <div class="title">PRO Gami</div></a
+      >
     </div>
     <div class="profile-container">
       <div class="trips-container">
@@ -14,7 +16,9 @@
           (click)="showTrips()"
         >
           My Trips
-          <span class="drop-down-icon"><img  src="../../../assets/images/drop-down.svg" /></span>
+          <span class="drop-down-icon"
+            ><img src="../../../assets/images/drop-down.svg"
+          /></span>
         </button>
         <div class="trip-container" *ngIf="showTripContainer">
           <app-trips (closeContainer)="closeContainer($event)"></app-trips>
@@ -24,10 +28,9 @@
         <pro-gamification
           [userId]="gamificationUserId"
           [applicationId]="gamificationAppId"
-          [themeColor]="'secondary'"
-          [menuColor]="'white'"
+          [themeColor]="'sandbox'"
+          [menuColor]="'menucolor'"
         ></pro-gamification>
-        <inspect-popup></inspect-popup>
       </div>
     </div>
   </div>
@@ -52,4 +55,3 @@
     <div class="empty-container"></div>
   </footer>
 </body>
-<app-notifier></app-notifier>
