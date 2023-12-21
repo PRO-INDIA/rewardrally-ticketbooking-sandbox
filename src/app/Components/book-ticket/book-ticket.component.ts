@@ -114,4 +114,16 @@ export class BookTicketComponent {
       droppinglandMark: 'Near MG Road',
     },
   ];
+
+  scrollToAvailableBuses() {
+    setTimeout(() => {
+      let selectedUser = document.getElementById(
+        'Available-Buses'
+      ) as HTMLElement;
+
+      if (selectedUser) {
+        selectedUser.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
+  }
 }

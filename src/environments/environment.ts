@@ -1,9 +1,7 @@
 import packageJson from '../../package.json';
-
-
- 
 export const environment = {
-  appVersion: "2.1.0",
+  appVersion: '2.1.0',
+
   production: false,
   baseUrl: 'https://gamifyapi.theproindia.com',
   blobEndpoint: 'https://prodgamificationui.blob.core.windows.net',
@@ -12,8 +10,8 @@ export const environment = {
   clientSecret: 'ofi8Q~gtJKac_.jTaGWFzcFjQHM6cRQzKDkpWduI',
   //Paste Your Application Code
   gamification: {
-    userId: '8f93bbbe-25a5-400b-9d9b-3a4dcc252a4a',
-    gameId: '646758f9bfa0de03f7d45a0c',
-    applicationId: '646758f8bfa0de5475d45a05',
+    userId: 'a19b7e2c-51cc-4480-b57d-193fc816b10b',
+    gameId: '658418ab6be25463ecf42c1c',
+    applicationId: '658418aa6be25442c3f42c11',
   },
 };

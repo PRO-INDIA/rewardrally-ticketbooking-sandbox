@@ -20,9 +20,6 @@ export class BusDetailComponent implements OnInit {
   togglePaymet: boolean = false;
   rewardPoints: any;
 
-  sasToken: string =
-    '?sv=2020-10-02&si=sandbox-assets-188BDA9327F&sr=c&sig=kHlt0prnMYgLIWMPASPmU2VN%2BlxXICXJMkEkV863RoE%3D';
-
   busFacility: string = `${this.blobEndPoint}/${this.containerName}/bus-facility.png`;
 
   seats: string = `${this.blobEndPoint}/${this.containerName}/seats.png`;

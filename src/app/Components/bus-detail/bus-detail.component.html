@@ -6,7 +6,7 @@
         <div class="bus-type">{{ busDetails.type }}</div>
         <div
           class="bus-facililty"
-          [style.backgroundImage]="'url(' + busFacility + sasToken + ')'"
+          [style.backgroundImage]="'url(' + busFacility + ')'"
         ></div>
       </div>
       <div class="bus-fare-detail-mobile">
@@ -34,13 +34,11 @@
       </div>
     </div>
   </div>
-  <div class="confirm-section"    id="{{
-     'bus-' +index
-  }}"  *ngIf="togglePaymet">
+  <div class="confirm-section" id="{{ 'bus-' + index }}" *ngIf="togglePaymet">
     <div class="payment-container">
       <div
         class="seat-selection"
-        [style.backgroundImage]="'url(' + seats + sasToken + ')'"
+        [style.backgroundImage]="'url(' + seats + ')'"
       ></div>
       <div class="payment">
         <div class="payment-wrap">
@@ -82,7 +80,9 @@
               <div>{{ busDetails.fare }}</div>
             </div>
             <div class="confirm-payment">
-              <div class="confirm-button" (click)="bookTicket()">Pay Now</div>
+              <button class="confirm-button" (click)="bookTicket()">
+                Pay Now
+              </button>
             </div>
           </div>
         </div>

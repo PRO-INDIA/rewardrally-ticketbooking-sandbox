@@ -25,7 +25,9 @@
         <div class="input-state">Tuesday</div>
       </div>
       <div class="search-button-container">
-        <div class="search-button">Search</div>
+        <button class="search-button" (click)="scrollToAvailableBuses()">
+          Search
+        </button>
       </div>
     </div>
   </section>
@@ -39,7 +41,7 @@
             [offer]="offer"
           ></app-offer>
         </div>
-        <div class="offer-2-section">
+        <div class="offer-2-section" id="Available-Buses">
           <app-offer
             *ngFor="let offer of offers | slice : 3"
             [offer]="offer"
@@ -48,12 +50,12 @@
       </div>
     </div>
   </section>
-  <section>
+  <section >
     <div class="bus-detail-section container-decoration">
       <div class="offers-title">Available Bus (5)</div>
       <div class="bus-list">
         <app-bus-detail
-          *ngFor="let bus of buses;let i =index"
+          *ngFor="let bus of buses; let i = index"
           [busDetails]="bus"
           [index]="i"
         ></app-bus-detail>
