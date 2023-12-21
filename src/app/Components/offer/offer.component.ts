@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class OfferComponent implements OnInit {
   @Input() offer: any;
+
   constructor() {}
 
   ngOnInit(): void {}

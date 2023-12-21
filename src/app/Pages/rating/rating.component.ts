@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ModalService } from '../../Services/modal.service';
 import { TicketService } from '../../Services/ticket.service';
 import { Gamification } from '@stagetheproindia/pro-gamification';
+import { environment } from '../../../environments/environment';
 @Component({
   selector: 'app-rating',
   templateUrl: './rating.component.html',
@@ -40,12 +41,11 @@ export class RatingComponent implements OnInit {
       this.resetForm();
       //Paste the copied code here
       this.rewardPoints = await this.gamification.updateGameAction(
-        '20cf82e7-5cd4-479e-8fef-2ca0ce6f78fe',
-        '654098dc3b35500e3f4789b9',
+        environment.gamification.userId,
+        '65841dfa2371873e8b8f3aa6',
         '',
         ''
       );
-
       this.modalService.modalStateData.next({
         headerText: 'Booked Successfully',
         pointsText: 'Points',
