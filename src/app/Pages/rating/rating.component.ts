@@ -4,6 +4,7 @@ import { ModalService } from '../../Services/modal.service';
 import { TicketService } from '../../Services/ticket.service';
 import { Gamification } from '@theproindia/pro-gamification';
 import { environment } from '../../../environments/environment';
+
 @Component({
   selector: 'app-rating',
   templateUrl: './rating.component.html',
@@ -28,14 +29,12 @@ export class RatingComponent implements OnInit {
   @Input() busDeatails: any = {};
   rating = 0;
   feedback = '';
-
   ngOnInit(): void {
     this.tripDetails = this.ticketService.trips.filter((trip) => {
       return trip.ticketId == this.tripId;
     });
     this.trip = this.tripDetails[0];
   }
-
   async addReview() {
     if (this.rating && this.feedback) {
       this.resetForm();
