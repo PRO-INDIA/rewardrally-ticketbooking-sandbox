@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ModalService } from '../../Services/modal.service';
 import { TicketService } from '../../Services/ticket.service';
-import { Gamification } from '@stagetheproindia/pro-gamification';
+import { Gamification } from '@theproindia/pro-gamification';
 import { environment } from '../../../environments/environment';
 @Component({
   selector: 'app-rating',
@@ -42,7 +42,7 @@ export class RatingComponent implements OnInit {
       //Paste the copied code here
       this.rewardPoints = await this.gamification.updateGameAction(
         environment.gamification.userId,
-        '65841dfa2371873e8b8f3aa6',
+        '658422b46be254eb36f4602e',
         '',
         ''
       );
