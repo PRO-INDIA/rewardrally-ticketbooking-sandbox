@@ -13,5 +13,5 @@ export const environment = {
     userId: '80b4c6e8-746a-479b-9109-465417ba1566',
     gameId: '65841c902371875b198f38ef',
     applicationId: '65841c902371871be78f38e4',
-  },
+   },
 };
