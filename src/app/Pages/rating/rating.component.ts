@@ -35,7 +35,6 @@ export class RatingComponent implements OnInit {
     });
     this.trip = this.tripDetails[0];
   }
-
   async addReview() {
     if (this.rating && this.feedback) {
       this.resetForm();
