@@ -39,18 +39,6 @@ export class RatingComponent implements OnInit {
     if (this.rating && this.feedback) {
       this.resetForm();
       //Paste the copied code here
-      this.rewardPoints = await this.gamification.updateGameAction(
-        environment.gamification.userId,
-        '658422b46be254eb36f4602e',
-        '',
-        ''
-      );
-      this.modalService.modalStateData.next({
-        headerText: 'Booked Successfully',
-        pointsText: 'Points',
-        points: this.rewardPoints.points,
-      });
-      this.modalService.openModal();
     } else {
       this.showErrorText = true;
     }
