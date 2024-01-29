@@ -7,7 +7,7 @@ export const environment = {
   blobEndpoint: 'https://stagegamificationui.blob.core.windows.net',
   containerName: 'sandbox-assets',
   clientId: '08ce0068-2906-44d4-b840-b268e5511624',
-  clientSecret: '2BG8Q~Vsd33.QQ93jcejZkrr5aVyXvxbl_FrubYg',
+  clientSecret: 'CL68Q~D5jO5XEXI8TodHLkha3HG5E83zgZ6KmbZK',
   //Paste your code in gamification object
   gamification: {
     userId: '80b4c6e8-746a-479b-9109-465417ba1566',
