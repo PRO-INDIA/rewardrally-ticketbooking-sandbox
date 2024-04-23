@@ -1,9 +1,11 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+
 import { ModalService } from '../../Services/modal.service';
+import { RewardRallyService } from '@stagetheproindia/rewardrally';
 import { TicketService } from '../../Services/ticket.service';
-import { Gamification } from '@stagetheproindia/pro-gamification';
 import { environment } from '../../../environments/environment';
+
 @Component({
   selector: 'app-rating',
   templateUrl: './rating.component.html',
@@ -15,9 +17,9 @@ export class RatingComponent implements OnInit {
     public activatedRoute: ActivatedRoute,
     public ticketService: TicketService,
     public modalService: ModalService,
-    public gamification: Gamification,
+    public rewardRallyService: RewardRallyService,
     public route: Router
-  ) {}
+  ) { }
   showErrorText: boolean = false;
   ticketId: string = '';
   tripDetails: any;
@@ -40,11 +42,9 @@ export class RatingComponent implements OnInit {
     if (this.rating && this.feedback) {
       this.resetForm();
       //Paste the copied code here
-      this.rewardPoints = await this.gamification.updateGameAction(
+      this.rewardPoints = await this.rewardRallyService.updateGameAction(
         environment.gamification.userId,
         '65841dfa2371873e8b8f3aa6',
-        '',
-        ''
       );
       this.modalService.modalStateData.next({
         headerText: 'Booked Successfully',
