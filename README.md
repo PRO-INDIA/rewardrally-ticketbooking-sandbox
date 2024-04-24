@@ -1,29 +1,40 @@
-# SandboxGamificationAngular
+# BusBookingApp With RewardRally
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.2.
+Reward Rally gamifies the bus booking experience, boosting user engagement through interactive leaderboards and incentivized booking activities. By showcasing Reward Rally's capabilities, the demo app illustrates how gamification enhances user retention and satisfaction within the transportation industry.
 
-## Development server
+## Reward Rally - Platform that leverages gaming techniques to motivate user participation, engagement, and collaboration.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Installation
 
-## Code scaffolding
+Install dependencies
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```bash
+npm install
+```
 
-## Build
+## Usage
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Serve on http://localhost:4200
 
-## Running unit tests
+```bash
+npm run start
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Confirm Your Bus Ticket By clicking 'Pay Now'
+- Your score in the leaderboard will be updated
 
-## Running end-to-end tests
+## Security Reporting
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+If you find a security issue with our libraries or services please report it to contact@rewardrally.in with as much detail as possible. We will contact you shortly upon receiving the information.
 
-## Further help
+## License
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Copyright (c) Peninsular Research Operation. All rights reserved.
 
-Angular Sandbox
+## Contact
+
+For seamless integartion of rewardrally, questions, issues, or feedback, please contact contact@rewardrally.in
+
+## Keywords
+
+RewardRally, Gamification, NPM, angular, User engagement and retention, increase customer retention, Employee engagement, Employee retention, Gamification blogs, increase customer engagement, RewardRally Demo App ,RewardRally Sample Bus booking App, Reward Rally Sample App
