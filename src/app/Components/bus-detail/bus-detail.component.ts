@@ -1,7 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Gamification } from '@stagetheproindia/pro-gamification';
-import { environment } from '../../../environments/environment';
+
 import { ModalService } from '../../Services/modal.service';
+import { RewardRallyService } from "@stagetheproindia/rewardrally";
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-bus-detail',
@@ -10,9 +11,9 @@ import { ModalService } from '../../Services/modal.service';
 })
 export class BusDetailComponent implements OnInit {
   constructor(
-    public gamification: Gamification,
+    public rewardRallyService: RewardRallyService,
     public modalService: ModalService
-  ) {}
+  ) { }
   @Input() index = 0;
   @Input() busDetails: any;
   containerName = environment.containerName;
@@ -23,14 +24,12 @@ export class BusDetailComponent implements OnInit {
   busFacility: string = `${this.blobEndPoint}/${this.containerName}/bus-facility.png`;
 
   seats: string = `${this.blobEndPoint}/${this.containerName}/seats.png`;
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   async bookTicket() {
-    this.rewardPoints = await this.gamification.updateGameAction(
+    this.rewardPoints = await this.rewardRallyService.updateGameAction(
       environment.gamification.userId,
-      environment.gamification.gameId,
-      '',
-      ''
+      environment.gamification.gameId
     );
 
     this.modalService.modalStateData.next({

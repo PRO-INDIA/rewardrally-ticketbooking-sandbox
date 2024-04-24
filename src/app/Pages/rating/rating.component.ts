@@ -1,8 +1,10 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+
 import { ModalService } from '../../Services/modal.service';
+import { RewardRallyService } from '@stagetheproindia/rewardrally';
 import { TicketService } from '../../Services/ticket.service';
-import { Gamification } from '@stagetheproindia/pro-gamification';
+
 @Component({
   selector: 'app-rating',
   templateUrl: './rating.component.html',
@@ -14,9 +16,9 @@ export class RatingComponent implements OnInit {
     public activatedRoute: ActivatedRoute,
     public ticketService: TicketService,
     public modalService: ModalService,
-    public gamification: Gamification,
+    public rewardRallyService: RewardRallyService,
     public route: Router
-  ) {}
+  ) { }
   showErrorText: boolean = false;
   ticketId: string = '';
   tripDetails: any;

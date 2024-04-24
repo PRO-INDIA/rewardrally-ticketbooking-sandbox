@@ -1,9 +1,8 @@
-import packageJson from '../../package.json';
 export const environment = {
   appVersion: '2.1.0',
 
   production: false,
-  baseUrl: 'https://stage-gamificationapi.theproindia.com',
+  baseUrl: 'https://stage-gamificationapi.rewardrally.in',
   blobEndpoint: 'https://stagegamificationui.blob.core.windows.net',
   containerName: 'sandbox-assets',
   clientId: '08ce0068-2906-44d4-b840-b268e5511624',
