@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Gamification } from '@theproindia/pro-gamification';
+import { RewardRallyService } from '@theproindia/rewardrally';
 import { environment } from '../../../environments/environment';
 import { ModalService } from '../../Services/modal.service';
 
@@ -10,7 +10,7 @@ import { ModalService } from '../../Services/modal.service';
 })
 export class BusDetailComponent implements OnInit {
   constructor(
-    public gamification: Gamification,
+    public rewardRallyService: RewardRallyService,
     public modalService: ModalService
   ) {}
   @Input() index = 0;
@@ -26,7 +26,7 @@ export class BusDetailComponent implements OnInit {
   ngOnInit(): void {}
 
   async bookTicket() {
-    this.rewardPoints = await this.gamification.updateGameAction(
+    this.rewardPoints = await this.rewardRallyService.updateGameAction(
       environment.gamification.userId,
       environment.gamification.gameId,
       '',
