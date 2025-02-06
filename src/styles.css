@@ -5,3 +5,10 @@
 ::-webkit-scrollbar-thumb {
   background-color: #fff;
 }
+
+
+.pro-container .scroll .tabs button.active {
+  background-color: #2a8c90 !important;
+}
+
+
